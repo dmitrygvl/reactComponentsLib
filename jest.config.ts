@@ -44,7 +44,14 @@ const config: Config = {
   // ],
 
   // An object that configures minimum threshold enforcement for coverage results
-  // coverageThreshold: undefined,
+  coverageThreshold: {
+    global: {
+      branches: 60,
+      functions: 60,
+      lines: 60,
+      statements: -20,
+    },
+  },
 
   // A path to a custom dependency extractor
   // dependencyExtractor: undefined,
@@ -147,7 +154,7 @@ const config: Config = {
 
   // The test environment that will be used for testing
   testEnvironment: "jsdom",
-
+  verbose: true,
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
 
