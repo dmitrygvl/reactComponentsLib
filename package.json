@@ -32,7 +32,9 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jest": "^27.6.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "favicons-webpack-plugin": "^6.0.1",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
@@ -44,9 +46,14 @@
     "prettier": "^3.1.0",
     "style-loader": "^3.3.3",
     "ts-node": "^10.9.1",
+    "typescript": "^5.3.2",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "lint-staged": {
     "*.{js,ts}": [

@@ -7,19 +7,24 @@ const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 const webpack = require("webpack");
 
+const isDev = process.env.NODE_ENV === "development";
+
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, "./src/index.ts"),
+    main: path.resolve(__dirname, "./src/index.tsx"),
   },
   output: {
-    path: path.resolve(__dirname, "./dist"),
-    filename: "[name].[hash].js",
     clean: true,
+    filename: "[name].bundle.[chunkhash].js",
+    path: path.resolve(__dirname, "./dist"),
   },
   resolve: {
-    extensions: [".js", ".ts"],
+    extensions: [".js", ".ts", ".jsx", ".tsx"],
   },
-  devtool: "inline-source-map",
+  devtool:
+    process.env.NODE_ENV === "production"
+      ? "hidden-source-map"
+      : "eval-source-map",
   devServer: {
     static: path.join(__dirname, "dist"),
     compress: true,
@@ -28,7 +33,17 @@ module.exports = {
     // allowedHosts: "all",
   },
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./public/index.html"),
+    }),
+    ...(isDev
+      ? [new MiniCssExtractPlugin()]
+      : [
+          new MiniCssExtractPlugin({
+            chunkFilename: "[name].[contenthash].css",
+            filename: "[name].[contenthash].css",
+          }),
+        ]),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "[name].[hash].css",
@@ -39,7 +54,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(?:js|mjs|cjs|ts)$/i,
+        test: /\.(?:js|mjs|cjs|ts|jsx|tsx)$/i,
         exclude: /(node_modules)/,
         use: {
           loader: "babel-loader",
