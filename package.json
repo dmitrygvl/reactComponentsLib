@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "prettier --check . && eslint . && npx tsc --noEmit",
+    "lint:fix": "prettier --write . && eslint . --fix && npx tsc --noEmit",
+    "prepare": "husky install",
+    "start": "webpack serve --mode development",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "check-ts": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
@@ -22,9 +30,18 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-react": "^7.33.2",
+    "husky": "^8.0.3",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "lint-staged": "^15.1.0",
     "prettier": "^3.1.0",
     "ts-node": "^10.9.1"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{css,scss,md,yml}": "prettier --write"
   }
 }
