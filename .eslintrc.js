@@ -2,15 +2,12 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    "jest/globals": true,
   },
-
   extends: [
-    "airbnb-base",
-    "plugin:jest/recommended",
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "prettier",
+    "plugin:storybook/recommended",
   ],
   overrides: [
     {
@@ -25,28 +22,20 @@ module.exports = {
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaFeatures: {
-      tsx: true,
-    },
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "react", "jest", "react-hooks", "prettier"],
+  plugins: ["@typescript-eslint", "react"],
   rules: {
-    "max-len": [
-      "error",
-      {
-        code: 140,
-        ignoreComments: true,
-      },
-    ],
-    "@typescript-eslint/no-unused-vars": 0,
-    "@typescript-eslint/no-var-requires": 0,
     "import/prefer-default-export": "off",
-    "no-promise-executor-return": "off",
-    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "jest/valid-title": "off",
+    "no-console": "off",
+    "no-alert": "off",
+    "no-restricted-globals": "off",
     "no-plusplus": "off",
-    "import/no-unresolved": "off", // https://github.com/typescript-eslint/typescript-eslint/issues/1624
-    "import/extensions": ["warn", "never"], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "no-restricted-syntax": ["off", "ForOfStatement"],
   },
 };
