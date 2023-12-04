@@ -8,7 +8,7 @@
 // }
 
 import React, { Component } from "react";
-import { LineType } from "./types";
+import { LineType } from "../../types/types";
 import "./HorizontalLine.css";
 
 export interface Props {
