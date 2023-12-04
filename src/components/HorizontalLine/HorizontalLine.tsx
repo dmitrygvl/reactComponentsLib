@@ -7,23 +7,25 @@
 //   }
 // }
 
-import React, { Component } from "react";
-import { LineType } from "../../types/types";
+import React, { FC } from "react";
+import { LineType, HorizontalLineProps } from "../../types/types";
 import "./HorizontalLine.css";
 
-export interface Props {
-  lineType?: LineType;
-}
-
-const defaultProps: Props = {
+const defaultProps: HorizontalLineProps = {
   lineType: LineType.Solid,
 };
 
-export class HorizontalLine extends Component<Props> {
-  static defaultProps = defaultProps;
+// export class HorizontalLine extends Component<Props> {
+//   static defaultProps = defaultProps;
 
-  render() {
-    const { lineType } = this.props;
-    return <hr className={lineType} data-testid="hr" />;
-  }
-}
+//   render() {
+//     const { lineType } = this.props;
+//     return <hr className={lineType} data-testid="hr" />;
+//   }
+// }
+
+export const HorizontalLine: FC<HorizontalLineProps> = ({ lineType }) => {
+  return <hr className={lineType} data-testid="hr" />;
+};
+
+HorizontalLine.defaultProps = defaultProps;

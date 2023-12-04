@@ -1,5 +1,13 @@
 import React, { FC } from "react";
-import { HeaderProps, Levels } from "../../types/types";
+import { HeadingProps } from "../../types/types";
+
+// export const Heading: FC<HeaderProps> = ({ level, text}) => {
+//   return (
+//     <header className="header">
+
+//     </header>
+//   )
+// }
 
 // export interface Props {
 //   level?: Levels;
@@ -44,11 +52,3 @@ import { HeaderProps, Levels } from "../../types/types";
 // };
 
 // Heading.defaultProps = defaultProps;
-
-export const Heading: FC<HeaderProps> = ({ level, text}) => {
-  return (
-    <header>
-      
-    </header>
-  )
-}

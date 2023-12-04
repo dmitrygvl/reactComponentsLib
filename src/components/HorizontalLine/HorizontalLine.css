@@ -1,15 +1,19 @@
 hr {
   height: 1px;
+  color: #440909;
 }
 
 .solid-line {
   border-top: 1px solid;
+  color: #440909;
 }
 
 .double-line {
   border-top: 3px double;
+  color: #440909;
 }
 
 .dashed-line {
   border-top: 2px dashed;
+  color: #440909;
 }

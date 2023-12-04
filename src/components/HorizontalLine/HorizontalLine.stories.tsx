@@ -2,7 +2,7 @@ import React from "react";
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { HorizontalLine, Props } from "./HorizontalLine";
+import { HorizontalLine } from "./HorizontalLine";
 import { LineType } from "../../types/types";
 
 export default {
