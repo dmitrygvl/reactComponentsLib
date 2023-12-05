@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { Heading } from "./Heading";
 
-describe("Heading", () => {
+describe("Heading component", () => {
   it("renders heading with correct level and title", () => {
     const { getByText } = render(<Heading level={1} title="Hello, World!" />);
     const headingElement = getByText("Hello, World!");

@@ -11,12 +11,6 @@ export interface HorizontalLineProps {
   lineType?: LineType;
 }
 
-const defaultProps: HorizontalLineProps = {
-  lineType: LineType.Solid,
-};
-
 export const HorizontalLine: FC<HorizontalLineProps> = ({ lineType }) => {
   return <hr className={lineType} data-testid="hr" />;
 };
-
-HorizontalLine.defaultProps = defaultProps;

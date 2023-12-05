@@ -8,11 +8,11 @@ export interface DetailsProps {
   text?: string;
 }
 
-export const Details: FC<DetailsProps> = (title, text) => {
+export const Details: FC<DetailsProps> = ({ title, text }) => {
   return (
-    <details>
-      <summary>{headingExample}</summary>
-      {textExapmle}
+    <details className="details">
+      <summary className="details-header">{title}</summary>
+      {text}
     </details>
   );
 };

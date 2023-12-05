@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import "./Image.css";
-
 import penguins from "../../assets/img/penguins.png";
 import monkey from "../../assets/img/monkey.png";
 import cat from "../../assets/img/cat.png";

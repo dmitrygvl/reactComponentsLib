@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { Image, Float, penguins, monkey } from "./Image";
 
-describe("Image", () => {
+describe("Image component", () => {
   it("renders image with the correct attributes", () => {
     const altText = "A penguin";
     const { getByAltText, getByText } = render(
