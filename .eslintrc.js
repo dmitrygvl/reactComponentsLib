@@ -8,6 +8,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:storybook/recommended",
+    "plugin:react-hooks/recommended",
   ],
   overrides: [
     {
@@ -25,7 +26,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "react"],
+  plugins: ["@typescript-eslint", "react", "react-refresh"],
   rules: {
     "import/prefer-default-export": "off",
     "@typescript-eslint/no-unused-vars": "off",
