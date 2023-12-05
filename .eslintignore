@@ -116,3 +116,4 @@ dist
 !.storybook
 storybook-static
 stories
+__mocks__
