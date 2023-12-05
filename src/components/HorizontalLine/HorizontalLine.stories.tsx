@@ -1,7 +1,5 @@
 import React from "react";
-
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-
 import { HorizontalLine } from "./HorizontalLine";
 import { LineType } from "../../types/types";
 

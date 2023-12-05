@@ -10,7 +10,6 @@ export default {
   argTypes: {
     float: {
       defaultValue: Float.None,
-      // text:
     },
   },
 } as ComponentMeta<typeof Image>;

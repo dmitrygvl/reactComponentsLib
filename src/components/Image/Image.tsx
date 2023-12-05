@@ -20,14 +20,10 @@ export interface ImageProps {
   text?: string;
 }
 
-const defaultProps: ImageProps = {
-  float: Float.None,
-  src: penguins || monkey || cat,
-  alt: "There should be a picture here",
-};
-
-// export const Image FC<ImageProps> = ({ alert, src, float }) => {
-//   return <img src={src} alt={alt} className={"image " + float} />
+// const defaultProps: ImageProps = {
+//   float: Float.None,
+//   src: penguins || monkey || cat,
+//   alt: "There should be a picture here",
 // };
 
 export const Image: FC<ImageProps> = ({ alt, src, float, text }) => {
@@ -38,5 +34,3 @@ export const Image: FC<ImageProps> = ({ alt, src, float, text }) => {
     </>
   );
 };
-
-// Image.defaultProps = defaultProps;
