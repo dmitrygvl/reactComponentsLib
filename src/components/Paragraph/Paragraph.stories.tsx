@@ -4,7 +4,7 @@ import { Paragraph, ParagraphStyles } from "./Paragraph";
 import { textExapmle } from "../../helpers/constatns";
 
 export default {
-  title: "Paragraph",
+  title: "React Components Lib/Paragraph",
   component: Paragraph,
   argTypes: {
     text: {

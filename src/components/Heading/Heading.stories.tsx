@@ -4,7 +4,7 @@ import { Heading } from "./Heading";
 import { headingExample } from "../../helpers/constatns";
 
 export default {
-  title: "Heading",
+  title: "React Components Lib/Heading",
   component: Heading,
 } as ComponentMeta<typeof Heading>;
 

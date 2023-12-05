@@ -5,7 +5,7 @@ import { ImageProps, Image, Float, penguins, monkey, cat } from "./Image";
 import { textExapmle } from "../../helpers/constatns";
 
 export default {
-  title: "Image",
+  title: "React Components Lib/Image",
   component: Image,
   argTypes: {
     float: {

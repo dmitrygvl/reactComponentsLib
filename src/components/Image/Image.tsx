@@ -10,7 +10,7 @@ export { penguins, monkey, cat };
 export enum Float {
   Left = "float-left",
   Right = "float-right",
-  None = "",
+  None = "None",
 }
 
 export interface ImageProps {
@@ -19,12 +19,6 @@ export interface ImageProps {
   float?: Float;
   text?: string;
 }
-
-// const defaultProps: ImageProps = {
-//   float: Float.None,
-//   src: penguins || monkey || cat,
-//   alt: "There should be a picture here",
-// };
 
 export const Image: FC<ImageProps> = ({ alt, src, float, text }) => {
   return (

@@ -4,7 +4,7 @@ import { Details } from "./Details";
 import { headingExample, textExapmle } from "../../helpers/constatns";
 
 export default {
-  title: "Details",
+  title: "React Components Lib/Details",
   component: Details,
 } as ComponentMeta<typeof Details>;
 

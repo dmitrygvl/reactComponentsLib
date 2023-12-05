@@ -1,6 +1,15 @@
 import React, { FC } from "react";
-import { LineType, HorizontalLineProps } from "../../types/types";
 import "./HorizontalLine.css";
+
+export enum LineType {
+  Solid = "solid-line",
+  Double = "double-line",
+  Dashed = "dashed-line",
+}
+
+export interface HorizontalLineProps {
+  lineType?: LineType;
+}
 
 const defaultProps: HorizontalLineProps = {
   lineType: LineType.Solid,
