@@ -1,0 +1,82 @@
+hr {
+  height: 1px;
+}
+
+.solid-line {
+  border-top: 1px solid;
+}
+
+.double-line {
+  border-top: 3px double;
+}
+
+.dashed-line {
+  border-top: 2px dashed;
+}
+
+.heading {
+  height: 10%;
+  align-self: center;
+  text-align: center;
+}
+
+details > summary {
+  padding: 5px;
+  background-color: #eee;
+  color: #333;
+  border: 1px #ccc solid;
+  cursor: pointer;
+}
+
+details > div {
+  border: 1px #ccc solid;
+  padding: 10px;
+}
+details[open] > summary {
+  color: #eee;
+  background-color: #333;
+}
+
+.regular {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.quote {
+  font-weight: 400;
+  font-style: italic;
+
+  &::before {
+    content: '"';
+  }
+
+  &::after {
+    content: '"';
+  }
+}
+
+.bold {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.image {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
