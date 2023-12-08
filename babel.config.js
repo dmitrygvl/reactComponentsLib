@@ -14,17 +14,3 @@ module.exports = (api) => ({
     "@babel/preset-react",
   ],
 });
-
-// module.exports = {
-//   presets: [
-//     [
-//       "@babel/preset-env",
-//       {
-//         targets: { node: "current" },
-//         useBuiltIns: "entry", // alternative mode: "entry"/ "usage"
-//       },
-//     ],
-//     "@babel/preset-typescript",
-//     "@babel/preset-react",
-//   ],
-// };

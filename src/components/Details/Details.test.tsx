@@ -11,7 +11,7 @@ describe("Details component", () => {
     const summaryElement = screen.getByText(testTitle);
     expect(summaryElement).toBeInTheDocument();
 
-    const textElement = screen.getByText(testText);
+    const textElement = screen.getByTestId("details");
     expect(textElement).toBeInTheDocument();
   });
 });

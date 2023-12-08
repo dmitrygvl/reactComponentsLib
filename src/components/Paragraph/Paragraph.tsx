@@ -14,6 +14,14 @@ export interface Props {
   text?: string;
 }
 
-export const Paragraph: FC<Props> = ({ children, fontStyle, text }) => {
-  return <p className={fontStyle}>{text || children}</p>;
+export const Paragraph: FC<Props> = ({
+  children,
+  fontStyle = ParagraphStyles.Regular,
+  text = textExapmle,
+}) => {
+  return (
+    <p data-testid="paragraph" className={fontStyle}>
+      {text || children}
+    </p>
+  );
 };

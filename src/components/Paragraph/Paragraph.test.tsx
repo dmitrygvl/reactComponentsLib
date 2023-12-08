@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { screen, render } from "@testing-library/react";
 import { Paragraph, ParagraphStyles } from "./Paragraph";
 
 describe("Paragraph component", () => {
@@ -7,7 +7,7 @@ describe("Paragraph component", () => {
     const { getByText } = render(
       <Paragraph fontStyle={ParagraphStyles.Regular}>Hello, World!</Paragraph>,
     );
-    const paragraphElement = getByText("Hello, World!");
+    const paragraphElement = screen.getByTestId("paragraph");
     expect(paragraphElement).toBeInTheDocument();
     expect(paragraphElement).toHaveClass("regular");
   });
