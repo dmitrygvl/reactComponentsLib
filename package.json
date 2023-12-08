@@ -18,7 +18,8 @@
     "loki": "npx loki test",
     "loki:approve": "loki approve",
     "loki:update": "loki update",
-    "ncu": "npm-check-updates --interactive --format group --doctor"
+    "ncu": "npm-check-updates --interactive --format group --doctor",
+    "chromatic": "npx chromatic --project-token=chpt_cff37e98e163881"
   },
   "keywords": [],
   "author": "",
@@ -105,5 +106,7 @@
         "preset": "iPhone 7"
       }
     }
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "reactcomponentslib@1.0.0"
 }
