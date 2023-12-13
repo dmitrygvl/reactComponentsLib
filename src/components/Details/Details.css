@@ -1,0 +1,16 @@
+details > summary {
+  padding: 5px;
+  background-color: #eee;
+  color: #333;
+  border: 1px #ccc solid;
+  cursor: pointer;
+}
+
+details > div {
+  border: 1px #ccc solid;
+  padding: 10px;
+}
+details[open] > summary {
+  color: #eee;
+  background-color: #333;
+}

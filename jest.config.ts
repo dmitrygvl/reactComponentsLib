@@ -1,8 +1,3 @@
-/**
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
-
 import type { Config } from "jest";
 
 const config: Config = {
@@ -85,19 +80,23 @@ const config: Config = {
   // ],
 
   // An array of file extensions your modules use
-  // moduleFileExtensions: [
-  //   "js",
-  //   "mjs",
-  //   "cjs",
-  //   "jsx",
-  //   "ts",
-  //   "tsx",
-  //   "json",
-  //   "node"
-  // ],
+  moduleFileExtensions: [
+    "js",
+    "mjs",
+    "cjs",
+    "jsx",
+    "ts",
+    "tsx",
+    "json",
+    "node",
+  ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+      "<rootDir>/__mocks__/fileMock.js",
+    "\\.(css|scss|less)$": "<rootDir>/__mocks__/styleMock.js",
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -144,7 +143,7 @@ const config: Config = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
@@ -204,3 +203,35 @@ const config: Config = {
 };
 
 export default config;
+
+// import type { Config } from "jest";
+
+// const config: Config = {
+//   automock: false,
+//   clearMocks: true,
+//   coverageDirectory: "coverage",
+//   coverageProvider: "v8",
+//   coverageReporters: ["html", "text", "json"],
+//   coverageThreshold: {
+//     global: {
+//       branches: 60,
+//       functions: 60,
+//       lines: 60,
+//       statements: 60,
+//     },
+//   },
+//   moduleNameMapper: {
+//     ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$":
+//       "identity-obj-proxy",
+//   },
+//   // preset: "ts-jest",
+//   setupFilesAfterEnv: ["./jest.setup.ts", "jest-extended/all"],
+//   testEnvironment: "jsdom",
+// };
+
+// export default config;
+
+/**
+ * For a detailed explanation regarding each configuration property, visit:
+ * https://jestjs.io/docs/configuration
+ */

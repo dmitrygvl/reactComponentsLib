@@ -1,20 +1,23 @@
-name: Codecov
-on: pull_request
+name: Codecov coverage comment
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Npm install
+      - name: Install Packages
         run: |
           npm ci
-
-      - name: Lint fix
-        run: |
-          npm run lint:fix
 
       - name: Lint
         run: |
